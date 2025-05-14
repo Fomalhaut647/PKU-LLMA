@@ -1,2 +1,3 @@
-# LLMA-1
-LLMA HW1
+# LLMA
+
+My LLMA homework
