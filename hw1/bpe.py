@@ -110,17 +110,3 @@ class Tokenizer:
 
         text = bytes(ids).decode('utf-8')
         return text
-
-if __name__ == "__main__":
-    tokenizer = Tokenizer()
-
-    with open("./hw1-code/bpe/manual.txt", "r") as f:
-        text = f.read()
-    tokenizer.train(text, 300)
-
-    with open("./hw1-code/bpe/manual_encoded_decoded.txt", "w") as f:
-        f.write(tokenizer.decode(tokenizer.encode(text)))
-        with open("./hw1-code/bpe/manual.txt", "r") as f1, open("./hw1-code/bpe/manual_encoded_decoded.txt", "r") as f2:
-            original = f1.read()
-            encoded = f2.read()
-            print("Files are identical:", original == encoded)
