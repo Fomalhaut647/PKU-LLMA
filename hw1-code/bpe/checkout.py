@@ -10,17 +10,17 @@ text_2 = "博士学位论文应当表明作者具有独立从事科学研究工�
 
 
 def train_tokenizer():
-    with open("./hw1-code/bpe/manual.txt", "r") as f:
+    with open("./data/manual.txt", "r") as f:
         text = f.read()
     my_tokenizer.train(text, 1024)
 
 
 def checkout_bpe():
-    with open("./hw1-code/bpe/manual.txt", "r") as f1, open("./hw1-code/bpe/manual_encoded_decoded.txt", "w") as f2:
+    with open("./data/manual.txt", "r") as f1, open("./data/manual_encoded_decoded.txt", "w") as f2:
         text = f1.read()
         f2.write(my_tokenizer.decode(my_tokenizer.encode(text)))
 
-    with open("./hw1-code/bpe/manual.txt", "r") as f1, open("./hw1-code/bpe/manual_encoded_decoded.txt", "r") as f2:
+    with open("./data/manual.txt", "r") as f1, open("./data/manual_encoded_decoded.txt", "r") as f2:
         original = f1.read()
         encoded = f2.read()
         print("Files are identical:", original == encoded)
