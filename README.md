@@ -1,3 +1,3 @@
 # LLMA
 
-My LLMA homework
+My LLMA homework lab1
