@@ -1,3 +1,5 @@
 # LLMA
 
-My LLMA homework lab1
+My LLMA homework Lab1
+
+[Lab2](https://github.com/Fomalhaut647/align-anything)
